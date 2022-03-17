@@ -33,6 +33,17 @@ export default {
       ],
       testMatch: ['**/tests/**/server/**/*.test.js'],
     },
+    {
+      ...defaultConfig,
+      testEnvironment: 'jsdom',
+      displayName: 'frontend',
+      collectCoverageFrom: ['public/'],
+      transformIgnorePatterns: [
+        ...defaultConfig.transformIgnorePatterns,
+        'server',
+      ],
+      testMatch: ['**/tests/**/public/**/*.test.js'],
+    },
   ],
 
   // All imported modules in your tests should be mocked automatically
