@@ -1,0 +1,7 @@
+server:
+    service = business rules or processing
+    controller = intermediates presentation layer and business layer
+    routes = presentation layer
+    server = responsible for creating the server (doesn't instantiate)
+    index = instantiates the server and exposes it to the web (infrastructure side)
+    config = everything static
